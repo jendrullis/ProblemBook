@@ -1,0 +1,1 @@
+server/scripts/setup-dev-env/Vagrantfile-for-debiki-site-seed
