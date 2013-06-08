@@ -52,6 +52,11 @@ for me on Ubuntu Linux 12.04 at least.
   just downloaded to your desktop machine (Vagrant [synchronizes folder
   contents](http://docs.vagrantup.com/v2/synced-folders/index.html)).
 
+  Regrettably, Vagrant might ask you for your root password, because Vagrant
+  enables a NFS share, so that source code on your desktop can be shared with
+  the VM.  (If not using NFS, it seems `npm install` fails to install Grunt,
+  because of some issue with softlinks.)
+
 
 
 4. Start Debiki
@@ -64,7 +69,9 @@ for me on Ubuntu Linux 12.04 at least.
         [debiki-server] $ run
 
 
-  Then go to `http://192.168.33.101:9000/-/install/` and follow the instructions.
+  Then go to `http://192.168.33.101:9000/-/install/`, click "Apply this script
+  now!".  Then follow the instructions.
+
   (IP address 192.168.33.101 is hardcoded in the Vagrantfile.)
 
   <sub>(If you're curious: The above-mentioned instructions tell you to find a
