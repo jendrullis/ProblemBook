@@ -64,7 +64,7 @@ for me on Ubuntu Linux 12.04 at least.
 
         $ vagrant ssh
         $ # And then, inside the VM: (and this will take a while, the first time)
-        $ cd /vagrant/server/
+        $ cd /debiki/server/
         $ play-2.1.1
         [debiki-server] $ run
 

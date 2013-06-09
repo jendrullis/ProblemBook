@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
   # NFS, 15 with NFS.) See http://docs.vagrantup.com/v2/synced-folders/nfs.html
   # Regrettably, using NFS results in Vagrant asking you for the root password,
   # so it can start an NFS server.
-  config.vm.synced_folder ".", "/vagrant", :nfs => true
+  config.vm.synced_folder ".", "/debiki", :nfs => true
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on

@@ -15,7 +15,7 @@
 vm_ip=192.168.33.101  # should be a script argument somehow?
                       # or `grep | sed` from the Vagrantfile?
 
-debiki_server_dir=/vagrant/server
+debiki_server_dir=/debiki/server
 
 if [ -f ~/vagrant-bootstrapped-db -a \
 			-f ~/vagrant-bootstrapped-appserver ]; then
@@ -28,7 +28,7 @@ echo 'Bootstrapping VM, this will take some time...'
 
 
 if [ ! -f ~/vagrant-bootstrapped-db ]; then
-  /vagrant/scripts/setup-dev-env/setup-database-ubuntu-server-12.04-amd64.sh
+  /debiki/scripts/setup-dev-env/setup-database-ubuntu-server-12.04-amd64.sh
   touch ~/vagrant-bootstrapped-db
 fi
 
@@ -37,7 +37,7 @@ play_script_path=""
 if [ ! -f ~/vagrant-bootstrapped-appserver ]; then
 
   play_dir=/opt/play
-  /vagrant/scripts/setup-dev-env/setup-appserver-ubuntu-server-12.04-amd64.sh \
+  /debiki/scripts/setup-dev-env/setup-appserver-ubuntu-server-12.04-amd64.sh \
       $play_dir  ~/build/nodejs/  /usr/local  vagrant
 
   # Warning: Duplicated code.
@@ -90,13 +90,13 @@ cd $debiki_server_dir
 cat <<EOF
 ===== All done: VM bootstrapped
 
-The virtual machine (VM) folder /vagrant/ is synced with the source
+The virtual machine (VM) folder /debiki/ is synced with the source
 code in your current working director (on your desktop/laptop).
 
 You can now start Debiki like so:
   $ vagrant ssh
   $ # Then, in the VM:
-  $ cd /vagrant/server/
+  $ cd /debiki/server/
   $ play-2.1.1
   [debiki] $ run
 
