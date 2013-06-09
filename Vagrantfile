@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   # This .sh file tells Vagrant which packages to install in a newly
   # launched VM.
   config.vm.provision :shell, :path =>
-      "server/scripts/setup-dev-env/vagrant-bootstrap-ubuntu-server-12.04-amd64.sh"
+      "scripts/setup-dev-env/vagrant-bootstrap-ubuntu-server-12.04-amd64.sh"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # Warning: IP currently hardcoded also in
-  #   scripts/vagrant-bootstrap-ubuntu-server-12.04-amd64.sh
+  #   scripts/setup-dev-env/vagrant-bootstrap-ubuntu-server-12.04-amd64.sh
   config.vm.network :private_network, ip: "192.168.33.101"
 
   # Use NFS, because: 1) Apparently, `npm install` fails to install Grunt,

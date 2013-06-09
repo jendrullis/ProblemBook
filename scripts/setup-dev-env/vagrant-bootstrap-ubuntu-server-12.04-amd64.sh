@@ -28,7 +28,7 @@ echo 'Bootstrapping VM, this will take some time...'
 
 
 if [ ! -f ~/vagrant-bootstrapped-db ]; then
-  /vagrant/server/scripts/setup-dev-env/setup-database-ubuntu-server-12.04-amd64.sh
+  /vagrant/scripts/setup-dev-env/setup-database-ubuntu-server-12.04-amd64.sh
   touch ~/vagrant-bootstrapped-db
 fi
 
@@ -37,7 +37,7 @@ play_script_path=""
 if [ ! -f ~/vagrant-bootstrapped-appserver ]; then
 
   play_dir=/opt/play
-  /vagrant/server/scripts/setup-dev-env/setup-appserver-ubuntu-server-12.04-amd64.sh \
+  /vagrant/scripts/setup-dev-env/setup-appserver-ubuntu-server-12.04-amd64.sh \
       $play_dir  ~/build/nodejs/  /usr/local  vagrant
 
   # Warning: Duplicated code.

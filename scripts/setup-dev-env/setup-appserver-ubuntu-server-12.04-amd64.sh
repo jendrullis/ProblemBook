@@ -124,8 +124,8 @@ echo '===== Installing local NPM modules'
 # Move to the base directory (the one with .git in, and a package.js Node.js file).
 
 echo "This script is located in: $script_dir"
-echo cd $script_dir/../..
-cd $script_dir/../..
+echo cd $script_dir/../../server/
+cd $script_dir/../../server/
 echo 'Running `npm install` in:' `pwd`
 
 npm install
