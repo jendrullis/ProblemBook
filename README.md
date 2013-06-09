@@ -54,8 +54,9 @@ for me on Ubuntu Linux 12.04 at least.
 
   Regrettably, Vagrant might ask you for your root password, because Vagrant
   enables a NFS share, so that source code on your desktop can be shared with
-  the VM.  (If not using NFS, it seems `npm install` fails to install Grunt,
-  because of some issue with softlinks.)
+  the VM. See http://docs.vagrantup.com/v2/synced-folders/nfs.html  (If not
+  using NFS, it seems `npm install` fails to install Grunt, because of some
+  issue with softlinks.)
 
 
 
@@ -70,7 +71,7 @@ for me on Ubuntu Linux 12.04 at least.
 
 
   Then go to `http://192.168.33.101:9000/-/install/`, click "Apply this script
-  now!".  Then follow the instructions.
+  now!", and follow the instructions.
 
   (IP address 192.168.33.101 is hardcoded in the Vagrantfile.)
 
